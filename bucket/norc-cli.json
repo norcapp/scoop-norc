@@ -17,5 +17,15 @@
     "pre_uninstall": [
         "& \"$dir\\..\\current\\norc.exe\" service uninstall"
     ],
-    "checkver": "github"
+    "checkver": {
+        "github": "https://github.com/RedcoatAsher/norc-cli-releases",
+        "regex": "cli-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RedcoatAsher/norc-cli-releases/releases/download/cli-v$version/norc-win-x64.exe#/norc.exe"
+            }
+        }
+    }
 }
