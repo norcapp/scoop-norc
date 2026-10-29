@@ -1,6 +1,6 @@
 {
     "version": "0.3.1",
-    "description": "Headless cron job scheduler for norc — can install (opt-in: `norc service install`) a per-user Scheduled Task (`norc bridge`) that syncs this machine's crontab with the norc web vault.",
+    "description": "Headless cron job scheduler for norc — installs a per-user Scheduled Task (`norc bridge`) that syncs this machine's crontab with the norc web vault.",
     "homepage": "https://norc.app/cli",
     "license": "Proprietary",
     "architecture": {
@@ -11,10 +11,11 @@
     },
     "bin": "norc.exe",
     "post_install": [
-        "if ($env:NORC_INSTALL_SERVICE -eq '1') { & \"$dir\\norc.exe\" service install; & \"$dir\\norc.exe\" __dupe-check } else { Write-Host \"norc: background service NOT installed. Run 'norc service install' to enable it (opt-in), or set NORC_INSTALL_SERVICE=1 and reinstall.\" }"
+        "& \"$dir\\norc.exe\" service install",
+        "& \"$dir\\norc.exe\" __dupe-check"
     ],
     "pre_uninstall": [
-        "try { & \"$dir\\norc.exe\" service uninstall } catch { }"
+        "& \"$dir\\norc.exe\" service uninstall"
     ],
     "checkver": {
         "github": "https://github.com/norcapp/norc-cli",
