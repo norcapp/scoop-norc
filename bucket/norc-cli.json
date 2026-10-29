@@ -1,12 +1,12 @@
 {
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Headless cron job scheduler for norc — installs a per-user Scheduled Task (`norc bridge`) that syncs this machine's crontab with the norc web vault.",
     "homepage": "https://norc.app/cli",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/norcapp/norc-cli/releases/download/v0.3.0/norc-win-x64.exe#/norc.exe",
-            "hash": "b829cff70870f26d2ff3e0b61f1d7d6f18fea7dc0390452eecbf11f1e4ebda51"
+            "url": "https://github.com/norcapp/norc-cli/releases/download/v0.3.1/norc-win-x64.exe#/norc.exe",
+            "hash": "53892638d159e195a7bae249eff945608a229b1f0509d4fbc2cdce2b095e29f8"
         }
     },
     "bin": "norc.exe",
